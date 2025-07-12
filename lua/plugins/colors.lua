@@ -24,9 +24,11 @@ return {
 				highlights = {
 					CursorLine = { bg = "#000000" },
 					FoldColumn = { fg = "#ff0000" },
+					Comment = { fg = "#908caa" },
 				},
 			})
 		end,
+		-- askjsaj
 	},
 	{ "catppuccin/nvim", name = "catppuccin" },
 }

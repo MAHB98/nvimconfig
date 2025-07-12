@@ -26,6 +26,8 @@ return {
 			"prettierd",
 			"tailwindcss",
 			"eslint-lsp",
+			"cspell-lsp",
+			"beautysh",
 		}
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 		local lspconfig = require("lspconfig")

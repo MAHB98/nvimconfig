@@ -41,7 +41,11 @@ return {
 					lua = { "stylua" },
 					python = { "isort", "black" },
 					rust = { "rustfmt", lsp_format = "fallback" },
-					["_"] = { "prettierd", "prettier", stop_after_first = true },
+					bash = { "beautysh" },
+
+					javascript = { "prettierd", "prettier", stop_after_first = true },
+					typescript = { "prettierd", "prettier", stop_after_first = true },
+					typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 				},
 			})
 			-- vim.o.formatexpr = "g/^$/d"
