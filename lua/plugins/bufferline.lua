@@ -16,6 +16,7 @@ return {
 					return " " .. icon .. count
 				end,
 				show_buffer_close_icons = false,
+				indicator = { style = "underline" },
 				separator_style = "slant",
 				offsets = {
 					{
@@ -32,8 +33,9 @@ return {
 				highlight = colors,
 			},
 		})
-		vim.cmd("highlight! TabLineFill guibg=#1f1d2e guifg=#111111 blend=100")
-		vim.cmd("highlight! BufferLineFill guibg=#0d0c13 guifg=#908caa blend=100")
 		vim.keymap.set("n", "bc", cmd.unpin_and_close)
+		vim.keymap.set("n", "<leader>pb", cmd.pick)
+		vim.keymap.set({ "n", "v" }, "]b", ":BufferLineCycleNext <cr>", { silent = true })
+		vim.keymap.set({ "n", "v" }, "[b", ":BufferLineCyclePrev <cr>", { silent = true })
 	end,
 }
