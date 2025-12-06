@@ -29,11 +29,10 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- vim.opt.guicursor = "i:block-blinkwait1000-blinkon500-blinkoff500"
-vim.keymap.set({ "i", "n" }, "<C-u>", vim.cmd.undo)
-vim.keymap.set({ "i", "n" }, "<C-r>", vim.cmd.redo)
 vim.keymap.set("n", "<C-k>", ":cp <cr>", { silent = true })
 vim.keymap.set("n", "<C-j>", ":cn <cr>", { silent = true })
 vim.keymap.set("n", "q", ":cclose  <cr>", { silent = true })
+vim.keymap.set("n", "esc", ":noh <cr>")
 -- vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { link = "Comment" })
 
 -- Setup lazy.nvim

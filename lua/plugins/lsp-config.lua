@@ -27,6 +27,8 @@ return {
 			"cspell-lsp",
 			"beautysh",
 			"sqlfmt",
+			"fixjson",
+			"css-lsp",
 		}
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 		local lspconfig = require("lspconfig")
@@ -54,6 +56,7 @@ return {
 				},
 			}
 		end
+		lspconfig.cssls.setup({})
 		lspconfig.cspell_lsp.setup({})
 		lspconfig.lua_ls.setup({})
 		lspconfig.bashls.setup({})

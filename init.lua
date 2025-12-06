@@ -23,5 +23,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		})
 	end,
 })
+
+vim.keymap.set("n", "<esc>", ":noh <cr>")
 --for spell checking
 -- vim.opt.spell = true
+-- vim.o.colorcolumn = "80,99"

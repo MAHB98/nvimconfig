@@ -1,0 +1,6 @@
+{
+	"rafc": {
+		"prefix": "rafc",
+		"body": "export const $1 =($2)=>{\n\t\t\treturn null\n\t\t}"
+	}
+}

@@ -61,7 +61,7 @@ return {
 		cmd = { "ConformInfo" },
 		keys = {
 			{
-				"<leader>f",
+				"<leader>F",
 				function()
 					require("conform").format({ async = true })
 				end,
@@ -94,6 +94,7 @@ return {
 					rust = { "rustfmt", lsp_format = "fallback" },
 					bash = { "shfmt" },
 
+					json = { "fixjson" },
 					sql = { "sqlfmt" },
 					mysql = { "sqlfmt" },
 					javascript = { "prettierd", "prettier", stop_after_first = true },

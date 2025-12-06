@@ -2,6 +2,8 @@ return {
 
 	{
 		"saghen/blink.cmp",
+		---@module 'blink.cmp'
+		---@type blink.cmp.Config
 		dependencies = { "rafamadriz/friendly-snippets" },
 
 		version = "1.*",
@@ -19,10 +21,6 @@ return {
 					"snippet_forward",
 					"fallback",
 				},
-				["<C-c>"] = { "cancel" },
-				-- ["<C-y>"] = false,
-				-- ["<C-n>"] = false,
-				-- ["<C-p>"] = false,
 			},
 
 			appearance = {
@@ -30,7 +28,17 @@ return {
 			},
 			signature = { enabled = true },
 
-			completion = { documentation = { auto_show = true } },
+			completion = {
+				menu = { auto_show = false },
+				ghost_text = { enabled = true },
+				documentation = { auto_show = true },
+				list = {
+					selection = {
+						preselect = true,
+						auto_insert = false,
+					},
+				},
+			},
 
 			sources = {
 				default = { "lsp", "path", "snippets", "buffer" },
@@ -41,6 +49,11 @@ return {
 				},
 				providers = {
 					dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+					-- snippets = {
+					-- 	opts={
+					-- 		 friendly_snippets = true,
+					-- 	}
+					-- },
 				},
 			},
 

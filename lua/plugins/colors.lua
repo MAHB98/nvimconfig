@@ -23,6 +23,7 @@ return {
 				transparent = true,
 				highlights = {
 					CursorLine = { bg = "#000000" },
+					IblScope = { fg = "#ffffff" },
 					FoldColumn = { fg = "#ff0000" },
 					Comment = { fg = "#908caa" },
 					TabLineSel = { bg = "#ff0000" },
@@ -30,6 +31,7 @@ return {
 					BufferLineFill = { fg = "#908caa", bg = "#0d0c13" },
 					["@variable"] = { fg = "#ffffff", style = "italic" },
 					DiagnosticUnnecessary = { fg = "#908caa" },
+					nonText = { fg = "#908caa" },
 				},
 			})
 		end,
