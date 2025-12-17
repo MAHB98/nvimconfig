@@ -9,7 +9,7 @@ return {
 
 		cmd.setup({
 			options = {
-				mode = "buffers",
+				mode = "Tab",
 				diagnostics = "nvim_lsp",
 				diagnostics_indicator = function(count, level, diagnostics_dict, context)
 					local icon = level:match("error") and " " or " "
@@ -37,5 +37,6 @@ return {
 		vim.keymap.set("n", "<leader>pb", cmd.pick)
 		vim.keymap.set({ "n", "v" }, "]b", ":BufferLineCycleNext <cr>", { silent = true })
 		vim.keymap.set({ "n", "v" }, "[b", ":BufferLineCyclePrev <cr>", { silent = true })
+		vim.keymap.set("n", "<leader>l", ":BufferLineCloseLeft <cr>")
 	end,
 }

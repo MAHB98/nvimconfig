@@ -24,7 +24,14 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
-vim.keymap.set("n", "<esc>", ":noh <cr>")
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("ts_ls")
+vim.lsp.enable("eslint")
+vim.lsp.enable("bashls")
+vim.lsp.enable("tailwindcss")
+vim.lsp.enable("cssls")
+vim.lsp.enable("cspel_lsp")
+
 --for spell checking
 -- vim.opt.spell = true
 -- vim.o.colorcolumn = "80,99"

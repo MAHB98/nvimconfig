@@ -32,6 +32,9 @@ return {
 					["@variable"] = { fg = "#ffffff", style = "italic" },
 					DiagnosticUnnecessary = { fg = "#908caa" },
 					nonText = { fg = "#908caa" },
+					TelescopePreviewPipe = { fg = "#00ff00", bg = "#0000ff" },
+					TelescopePreviewMatch = { fg = "#00ff00", bg = "#0000ff" },
+					TelescopePreviewLine = { fg = "#00ff00", bg = "#0000ff" },
 				},
 			})
 		end,

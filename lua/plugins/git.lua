@@ -1,5 +1,8 @@
 return {
 	{
+		"rhysd/conflict-marker.vim",
+	},
+	{
 		"tpope/vim-fugitive",
 		config = function()
 			vim.keymap.set("n", "<leader>gs", function()
@@ -13,6 +16,7 @@ return {
 				vim.cmd("keepalt Git")
 			end)
 			vim.keymap.set("n", "<leader>ga", vim.cmd.Gwrite)
+			vim.keymap.set("n", "<leader>gd", ":Gvdiffsplit! <cr>")
 		end,
 	},
 	{

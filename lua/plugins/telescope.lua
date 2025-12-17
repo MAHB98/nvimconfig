@@ -8,14 +8,10 @@ return {
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 			"nvim-telescope/telescope-ui-select.nvim",
 		},
+
 		config = function()
 			require("custom.multigrep").setup()
 			require("telescope").setup({
-				pickers = {
-					-- help_tags = {
-					-- 	theme = "ivy",
-					-- },
-				},
 				extensions = {
 					fzf = {
 						fuzzy = true,

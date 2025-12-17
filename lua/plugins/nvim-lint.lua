@@ -2,27 +2,26 @@ return {
 	"mfussenegger/nvim-lint",
 	config = function()
 		local lint = require("lint")
-		-- lint.linters.eslint = require("lint.util").wrap(lint.linters.eslint, function(diagnostic)
-		-- 	if diagnostic.code == "@typescript-eslint/no-unused-vars" then
-		-- 		return nil
-		-- 	end
-		-- 	return diagnostic
-		-- end)
-		-- ESLint handler to filter diagnostics
-		-- lint.handlers = {
-		-- 	eslint = function(diagnostics)
-		-- 		for _, diagnostic in ipairs(diagnostics) do
-		-- 			-- Match the rule exactly as it appears in ESLint output
-		-- 			if diagnostic.code == "@typescript-eslint/no-unused-vars" then
-		-- 				-- Change severity to INFO (or nil to hide)
-		-- 				diagnostic.severity = vim.diagnostic.severity.INFO
-		-- 				-- Alternatively, if you want to completely hide the warning:
-		-- 				-- diagnostic.severity = nil
-		-- 			end
-		-- 		end
-		-- 		return diagnostics
-		-- 	end,
-		-- }
+		lint.linters.eslint = require("lint.util").wrap(lint.linters.eslint, function(diagnostic)
+			if diagnostic.code == "@typescript-eslint/no-unused-vars" then
+				return nil
+			end
+			return diagnostic
+		end)
+		lint.handlers = {
+			eslint = function(diagnostics)
+				for _, diagnostic in ipairs(diagnostics) do
+					-- Match the rule exactly as it appears in ESLint output
+					if diagnostic.code == "@typescript-eslint/no-unused-vars" then
+						-- Change severity to INFO (or nil to hide)
+						diagnostic.severity = vim.diagnostic.severity.INFO
+						-- Alternatively, if you want to completely hide the warning:
+						-- diagnostic.severity = nil
+					end
+				end
+				return diagnostics
+			end,
+		}
 
 		-- Define linters for different filetypes
 		lint.linters_by_ft = {
